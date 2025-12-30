@@ -3,6 +3,10 @@
     {
       "username": "garkoly",
       "passwordHash": "$2a$12$cnLH3BI1kHVaLc/VN/BSq.wxXCpc.dgAfLxGWQ2W7VbB2mowLzdOe"
+    },
+    {
+      "username": "vastmammal",
+      "passwordHash": "$2a$12$.6iGU8Xvrx21AY7kJA1kNOiWIa0WePKHlWXdo3BqFRkYZgstU24fK"
     }
 
   ]

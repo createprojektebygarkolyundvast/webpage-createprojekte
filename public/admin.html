@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<body class="admin-body">
+
+  <!-- 🌗 Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+  <div class="admin-container">
+    <!-- Linke Seite: Login / Controls -->
+    <aside class="admin-left">
+      <div id="login-panel" class="login-panel glass-panel">
+        <h1 class="logo">Ultimate<span>Admin</span></h1>
+        <p class="subtitle">Login, dann drag & drop alles weg.</p>
+        <form id="login-form" class="login-form">
+          <label>Benutzername</label>
+          <input type="text" id="username" autocomplete="off" required />
+          <label>Passwort</label>
+          <input type="password" id="password" required />
+          <button type="submit">Login</button>
+          <p id="login-error" class="error-msg"></p>
+        </form>
+      </div>
+
+      <div id="controls-panel" class="controls-panel glass-panel hidden">
+        <h2>Editor</h2>
+
+        <section class="control-section">
+          <h3>Seiten-Hintergrund</h3>
+          <label>Hintergrundfarbe</label>
+          <input type="color" id="bg-color" />
+          <label>Gradient From</label>
+          <input type="color" id="gradient-from" />
+          <label>Gradient To</label>
+          <input type="color" id="gradient-to" />
+          <label>Font Family</label>
+          <select id="font-family">
+            <option value="'Poppins', system-ui">Poppins</option>
+            <option value="'Inter', system-ui">Inter</option>
+            <option value="'Roboto', system-ui">Roboto</option>
+            <option value="system-ui">System</option>
+          </select>
+        </section>
+
+        <section class="control-section">
+          <h3>Elemente</h3>
+          <div class="control-buttons">
+            <button type="button" id="add-text">Text-Box hinzufügen</button>
+            <button type="button" id="add-button">Button hinzufügen</button>
+          </div>
+        </section>
+
+        <section class="control-section">
+          <h3>Aktives Element</h3>
+          <p id="no-selection" class="muted">Kein Element ausgewählt.</p>
+          <div id="element-controls" class="element-controls hidden">
+            <label>Inhalt</label>
+            <textarea id="el-content"></textarea>
+
+            <label>URL (für Buttons)</label>
+            <input type="text" id="el-url" placeholder="https://..." />
+
+            <label>Textfarbe</label>
+            <input type="color" id="el-color" />
+
+            <label>Hintergrundfarbe</label>
+            <input type="color" id="el-bg-color" />
+
+            <label>Schriftgröße (px)</label>
+            <input type="number" id="el-font-size" min="8" max="80" />
+
+            <label>Ausrichtung</label>
+            <select id="el-align">
+              <option value="left">Links</option>
+              <option value="center">Zentriert</option>
+              <option value="right">Rechts</option>
+            </select>
+
+            <label>Breite (%)</label>
+            <input type="number" id="el-width" min="10" max="100" />
+
+            <label>Höhe (px)</label>
+            <input type="number" id="el-height" min="20" max="400" />
+
+            <label>Rundung (px)</label>
+            <input type="number" id="el-radius" min="0" max="50" />
+
+            <label>Schlagschatten</label>
+            <select id="el-shadow">
+              <option value="none">Keiner</option>
+              <option value="soft">Soft</option>
+              <option value="strong">Krass</option>
+            </select>
+
+            <button type="button" id="delete-element" class="danger">Element löschen</button>
+          </div>
+        </section>
+
+        <section class="control-section">
+          <button type="button" id="save-site" class="primary">Seite speichern</button>
+          <p id="save-status" class="muted"></p>
+        </section>
+      </div>
+    </aside>
+
+    <!-- Rechte Seite: Live-Preview -->
+    <section class="admin-right">
+      <div class="preview-wrapper">
+        <div class="preview-bar">
+          <span>Live Preview</span>
+          <a href="/" target="_blank">Öffentliche Seite öffnen</a>
+        </div>
+        <div id="preview-root" class="preview-root"></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

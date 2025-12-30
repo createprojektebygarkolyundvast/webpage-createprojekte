@@ -1,0 +1,9 @@
+{
+  "settings": {
+    "backgroundColor": "#020617",
+    "gradientFrom": "#1d4ed8",
+    "gradientTo": "#22c55e",
+    "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+  },
+  "elements": []
+}

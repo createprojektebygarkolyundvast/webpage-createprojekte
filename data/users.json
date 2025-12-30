@@ -1,5 +1,9 @@
 {
   "users": [
+    {
+      "username": "garkoly",
+      "passwordHash": "$2a$12$cnLH3BI1kHVaLc/VN/BSq.wxXCpc.dgAfLxGWQ2W7VbB2mowLzdOe"
+    }
 
   ]
 }
